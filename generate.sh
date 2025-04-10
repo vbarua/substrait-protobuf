@@ -26,5 +26,5 @@ buf generate "$TARGET"
 
 echo "Committing generated code"
 git add substraitpb-go
-git commit -m "feat: compiled Substrait Protobuf for $TAG"
+git commit --allow-empty -m "feat: compiled Substrait Protobuf for $TAG"
 git tag "$TAG" -m "Generated code for spec version $TAG"
