@@ -2,6 +2,12 @@ version: v2
 # delete the directories, zip files, and/or jar files specified in the
 # `out` field for all plugins before running code generation.
 clean: true
+managed:
+  enabled: true
+  override:
+    - file_option: go_package_prefix
+      value: github.com/vbarua/substrait-protobuf/substraitpb-go
+
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.30.0
     out: substraitpb-go/proto
