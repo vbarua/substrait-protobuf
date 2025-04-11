@@ -6,7 +6,7 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: github.com/vbarua/substrait-protobuf/substraitpb-go
+      value: github.com/substrait-io/substrait-protobuf/substraitpb-go
 
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.30.0
