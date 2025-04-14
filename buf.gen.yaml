@@ -6,10 +6,10 @@ managed:
   enabled: true
   override:
     - file_option: go_package_prefix
-      value: github.com/substrait-io/substrait-protobuf/substraitpb-go
+      value: github.com/substrait-io/substrait-protobuf/substraitpb-go/protos
 
 plugins:
   - remote: buf.build/protocolbuffers/go:v1.30.0
-    out: substraitpb-go
+    out: substraitpb-go/protos
     opt:
       - paths=source_relative
