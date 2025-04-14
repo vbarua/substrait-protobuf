@@ -1,4 +1,4 @@
-module github.com/substrait-io/substrait-protobuf
+module github.com/substrait-io/substrait-protobuf/substraitpb-go
 
 go 1.22.0
 
