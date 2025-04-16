@@ -6,6 +6,13 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+# Only run off of the main branch
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+if [ "$CURRENT_BRANCH" != "main" ]; then
+    echo "❌ ./generate-go must be invoked on main branch"
+    exit 2
+fi
+
 VERSION="$1"
 SPEC_REPO_URL="https://github.com/substrait-io/substrait.git"
 
@@ -15,7 +22,7 @@ if git ls-remote --tags "$SPEC_REPO_URL" "refs/tags/$VERSION" | grep -q .; then
     echo "✅ Tag '$VERSION' exists."
 else
     echo "❌ Tag '$VERSION' does NOT exist."
-    exit 2
+    exit 3
 fi
 
 BRANCH_NAME="releases/go/$VERSION"
@@ -35,3 +42,5 @@ git push --set-upstream origin "$BRANCH_NAME"
 VERSION_TAG="go/$VERSION"
 git tag "$VERSION_TAG" -m "Generated Go code for spec version $VERSION"
 git push origin "$VERSION_TAG"
+
+git checkout main
