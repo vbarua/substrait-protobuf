@@ -27,7 +27,7 @@ fi
 
 BRANCH_NAME="releases/go/$VERSION"
 echo "🔨 Creating new branch: $BRANCH_NAME"
-git checkout -b "$BRANCH_NAME"
+git checkout -B "$BRANCH_NAME"
 
 TARGET="https://github.com/substrait-io/substrait.git#tag=$VERSION"
 echo "🔧 Executing Protobuf code generation for $TARGET"
