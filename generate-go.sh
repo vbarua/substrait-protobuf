@@ -18,7 +18,7 @@ else
     exit 2
 fi
 
-BRANCH_NAME="go/$TAG"
+BRANCH_NAME="releases/go/$TAG"
 echo "🔨 Creating new branch: $BRANCH_NAME"
 git checkout -b "$BRANCH_NAME"
 

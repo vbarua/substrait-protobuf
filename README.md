@@ -14,9 +14,9 @@ Generation is managed by the `generate-go.sh` script which is invoked with a spe
 ```
 will:
 1. Check that `v0.64.0` is a valid tag in https://github.com/substrait-io/substrait
-2. Create a branch `go/v0.64.0`
+2. Create a branch `releases/go/v0.64.0`
 3. Generate the protobuf code for version `v0.64.0` of the spec into the `go/substraitpb/` directory
-4. Commit the generated code, and tag the commit with `go-v0.64.0`
+4. Commit the generated code, and tag the commit with `go/v0.64.0`
 
 Users can then access the code by referencing the tag.
 
