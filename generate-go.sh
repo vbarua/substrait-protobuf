@@ -30,4 +30,4 @@ echo "Committing generated code"
 
 git add go/substraitpb
 git commit --allow-empty -m "generated go/substraitpb for $TAG"
-git tag "go-$TAG" -m "Generated Go code for spec version $TAG"
+git tag "go/$TAG" -m "Generated Go code for spec version $TAG"
